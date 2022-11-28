@@ -1,7 +1,7 @@
 import { AlgoliaSearchIndex } from '@ircsignpost/signpost-base/dist/src/search-common';
 import { LatLngExpression } from 'leaflet';
 
-export const SITE_TITLE = 'TODO';
+export const SITE_TITLE = 'Khobor Kana';
 
 // TODO: add the country id of the instance to fetch the data from the cms for the service-map;
 export const COUNTRY_ID = 123;

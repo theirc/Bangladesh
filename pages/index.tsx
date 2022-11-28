@@ -13,6 +13,10 @@ import {
 import {
   CategoryWithSections,
   ZendeskCategory,
+  getArticle,
+  getCategories,
+  getCategoriesWithSections,
+  getTranslationsFromDynamicContent,
 } from '@ircsignpost/signpost-base/dist/src/zendesk';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
@@ -50,13 +54,6 @@ import {
   populateSocialMediaLinks,
 } from '../lib/translations';
 import { getZendeskMappedUrl, getZendeskUrl } from '../lib/url';
-// TODO Use real Zendesk API implementation.
-import {
-  getArticle,
-  getCategories,
-  getCategoriesWithSections,
-  getTranslationsFromDynamicContent,
-} from '../lib/zendesk-fake';
 
 interface HomeProps {
   currentLocale: Locale;
@@ -131,9 +128,10 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
       );
     });
   } else {
+    console.log(currentLocale);
     categories = await getCategories(currentLocale, getZendeskUrl());
-    categories = categories.filter((c) => !CATEGORIES_TO_HIDE.includes(c.id));
-    categories.forEach(
+    categories = categories?.filter((c) => !CATEGORIES_TO_HIDE.includes(c.id));
+    categories?.forEach(
       (c) => (c.icon = CATEGORY_ICON_NAMES[c.id] || 'help_outline')
     );
   }
@@ -156,18 +154,20 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const strings = populateHomePageStrings(dynamicContent);
 
   let regions = await fetchRegions(COUNTRY_ID, currentLocale.url);
-  regions.sort((a, b) => a.name.normalize().localeCompare(b.name.normalize()));
+  regions?.sort((a, b) => a.name.normalize().localeCompare(b.name.normalize()));
 
   const serviceCategories = await fetchServicesCategories(
     COUNTRY_ID,
     currentLocale.url
   );
-  serviceCategories.sort((a, b) =>
+  serviceCategories?.sort((a, b) =>
     a.name.normalize().localeCompare(b.name.normalize())
   );
 
   const services = await fetchServices(COUNTRY_ID, currentLocale.url);
-  services.sort((a, b) => a.name.normalize().localeCompare(b.name.normalize()));
+  services?.sort((a, b) =>
+    a.name.normalize().localeCompare(b.name.normalize())
+  );
 
   return {
     props: {

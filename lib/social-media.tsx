@@ -1,6 +1,7 @@
 // A module for handling social media.
 import { SocialMediaProps } from '@ircsignpost/signpost-base/dist/src/header-banner';
 
+import emailImage from '../public/email.svg';
 import facebookImage from '../public/facebook.svg';
 import messengerImage from '../public/messenger.svg';
 import whatsappImage from '../public/whatsapp.svg';
@@ -15,6 +16,7 @@ export interface SocialMediaLinks {
   facebookLink: SocialMediaLink;
   whatsappLink: SocialMediaLink;
   messengerLink: SocialMediaLink;
+  emailLink: SocialMediaLink;
 }
 
 /**
@@ -38,6 +40,11 @@ export function getSocialMediaProps(
     {
       ...socialMediaLinks.messengerLink,
       image: messengerImage,
+    },
+
+    {
+      ...socialMediaLinks.emailLink,
+      image: emailImage,
     },
   ];
 }

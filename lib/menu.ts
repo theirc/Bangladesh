@@ -27,7 +27,6 @@ export function getFooterItems(
   return items;
 }
 
-// TODO Update menu items if needed.
 export function getMenuItems(
   strings: CustomMenuOverlayStrings,
   categories: ZendeskCategory[] | CategoryWithSections[],

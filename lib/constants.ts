@@ -1,15 +1,11 @@
 import { AlgoliaSearchIndex } from '@ircsignpost/signpost-base/dist/src/search-common';
 import { LatLngExpression } from 'leaflet';
 
-export const SITE_TITLE = 'Bangladesh';
+export const SITE_TITLE = 'infoSheba';
 
-// TODO: add the country id of the instance to fetch the data from the cms for the service-map;
-export const COUNTRY_ID = 123;
+export const COUNTRY_ID = 42;
 
-// TODO: add the default coords for the center of the map
-export const MAP_DEFAULT_COORDS: LatLngExpression = [
-  34.45830721078611, 65.09457416213823,
-];
+export const MAP_DEFAULT_COORDS: LatLngExpression = [23.685, 90.3563];
 
 // Cache statically generated pages for 1 hour. The timeout was chosen
 // arbitrarily. Our website has static, non-urgent resources, so we probably do
@@ -17,15 +13,13 @@ export const MAP_DEFAULT_COORDS: LatLngExpression = [
 export const REVALIDATION_TIMEOUT_SECONDS: number = 1 * 60 * 60;
 
 // The "about us" article ID.
-//
-// TODO
-export const ABOUT_US_ARTICLE_ID: number = 123;
+
+export const ABOUT_US_ARTICLE_ID: number = 10092192370077;
 
 // The information hierary of the website.
 // Set to true for the category -> section -> article hierarchy, similar to that of United for Ukraine.
 // Set to false for the "information" -> category -> article hierarchy, similar to that of Beporsed.
 //
-// TODO
 export const USE_CAT_SEC_ART_CONTENT_STRUCTURE = false;
 
 // A mapping from category ID to a Material icon for that category.
@@ -50,30 +44,25 @@ export const CATEGORIES_TO_HIDE: number[] = [
 // Keep in sync with locales configured in /next.config.js.
 export const DYNAMIC_CONTENT_LOCALES: { [key: string]: number } = {
   'en-us': 1, // English locale id
-  // TODO: Add any other IDs needed
+  bn: 1368,
+  my: 1366,
 };
 
 export const ZENDESK_AUTH_HEADER = {
   Authorization: 'Bearer ' + process.env.ZENDESK_OAUTH_TOKEN,
 };
 
-// TODO: Add your app's google analytics ids as local and server environment variables,
-// and then add to this list. You may have two IDs, for example, during the migration
-// from Universal Analytics to Google Analytics 4. See README.md for more details.
-export const GOOGLE_ANALYTICS_IDS = [
-  // Example:
-  // process.env.NEXT_PUBLIC_GA4_ID ?? '',
-];
+export const GOOGLE_ANALYTICS_IDS = [process.env.NEXT_PUBLIC_GA4_ID ?? ''];
 
 // Algolia search app ID, Search API key and search index name:
 // https://www.algolia.com/account/api-keys/
 export const ALGOLIA_SEARCH_APP_ID = 'BWATZIXLX6';
 export const ALGOLIA_SEARCH_API_KEY = '0d9093280e7b2bc2b6ca12ed4180fd0a';
 
-// TODO: create Algolia indexes for Articles and Queries and replace the names here.
-// See README for more info on how to create indexes.
-export const ALGOLIA_ARTICLE_INDEX_NAME = 'TODO'; // TODO: replace article index name, e.g. 'zendesk_signpost-afghanistan_articles'.
-export const ALGOLIA_QUERY_INDEX_NAME = 'TODO'; // TODO: replace query index name, e.g. 'zendesk_signpost-afghanistan_articles_query_suggestions'.
+export const ALGOLIA_ARTICLE_INDEX_NAME =
+  'zendesk_signpost-bangladesh_articles';
+export const ALGOLIA_QUERY_INDEX_NAME =
+  'zendesk_signpost-bangladesh_articles_query_suggestions';
 
 export const SEARCH_BAR_INDEX: AlgoliaSearchIndex = {
   appId: ALGOLIA_SEARCH_APP_ID,

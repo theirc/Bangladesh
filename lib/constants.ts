@@ -37,9 +37,7 @@ export const SECTION_ICON_NAMES: { [key: string]: string } = {
 };
 
 // A list of category IDs that the site should not display.
-export const CATEGORIES_TO_HIDE: number[] = [
-  /* TODO */
-];
+export const CATEGORIES_TO_HIDE: number[] = [7773800444445];
 
 // A map from a locale code to Zendesk locale id used for dynamic content translations.
 // https://developer.zendesk.com/api-reference/ticketing/account-configuration/locales/
@@ -47,7 +45,6 @@ export const CATEGORIES_TO_HIDE: number[] = [
 export const DYNAMIC_CONTENT_LOCALES: { [key: string]: number } = {
   'en-us': 1, // English locale id
   bn: 1368,
-  my: 1366,
 };
 
 export const ZENDESK_AUTH_HEADER = {

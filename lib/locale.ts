@@ -14,7 +14,6 @@ export const LOCALES: { [key: string]: Locale } = {
     directus: 'en-US',
   },
   bn: { url: 'bn', direction: 'ltr', name: 'বাংলা', directus: '' },
-  my: { url: 'my', direction: 'ltr', name: 'မြန်မာ', directus: '' },
 };
 
 export const LOCALE_CODES_TO_CANONICAL_LOCALE_CODES: { [key: string]: string } =
@@ -22,7 +21,6 @@ export const LOCALE_CODES_TO_CANONICAL_LOCALE_CODES: { [key: string]: string } =
     en: 'en-us',
     'en-us': 'en-us',
     bn: 'bn',
-    my: 'my',
   };
 
 // Returns the effective locale given locale code.

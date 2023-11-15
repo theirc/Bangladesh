@@ -19,11 +19,6 @@ const langs: Lang[] = [
     langShort: 'en-us',
     langLong: 'English',
   },
-
-  {
-    langShort: 'my',
-    langLong: 'မြန်မာ',
-  },
 ];
 
 /** The locale selection page.

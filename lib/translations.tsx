@@ -56,6 +56,7 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_banner_tiktok_title',
   'default_banner_twitter_title',
   'default_banner_viber_title',
+  'default_banner_website_title',
   'default_skype_label',
   'default_signal_label',
   'default_banner_telephone_title',
@@ -94,9 +95,6 @@ export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_services_list_count_services',
   'default_service_map_map_tab',
   'default_service_map_list_tab',
-  'DEFAULT_SERVICE_MAP_ALL_REGIONS_OPTION',
-  'DEFAULT_SERVICE_MAP_ALL_CITIES_OPTION',
-  'DEFAULT_SERVICE_MAP_ALL_CATEGORIES_OPTION',
   'default_all_services_type_option',
   'default_all_providers_option',
   'default_all_populations_option',
@@ -105,6 +103,10 @@ export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_seach_input_text',
   'default_contact_button_label',
   'default_view_service_label',
+  'default_service_type_label',
+  'default_providers_label',
+  'default_accessibility_label',
+  'default_populations_label',
 ];
 
 export const CATEGORY_PLACEHOLDERS = [
@@ -185,6 +187,10 @@ export function populateServiceMapStrings(dynamicContent: {
     },
     popupStrings: populatePopupStrings(dynamicContent),
     labelSearchInput: { label: dynamicContent['default_seach_input_text'] },
+    labelAccessibility: dynamicContent['default_accessibility_label'],
+    labelPopulations: dynamicContent['default_populations_label'],
+    labelProvider: dynamicContent['default_providers_label'],
+    labelServicesTypes: dynamicContent['default_service_type_label'],
   };
 }
 
@@ -422,7 +428,7 @@ export function populateServiceContentStrings(dynamicContent: {
       Facebook: dynamicContent['default_banner_facebook_title'],
       Instagram: dynamicContent['default_banner_instagram_title'],
       LinkedIn: dynamicContent['default_linkedin_label'],
-      Telephone: dynamicContent['default_banner_telephone_title'],
+      Phone: dynamicContent['default_banner_telephone_title'],
       Signal: dynamicContent['default_signal_label'],
       Skype: dynamicContent['default_skype_label'],
       Telegram: dynamicContent['default_banner_telegram_title'],
@@ -430,6 +436,7 @@ export function populateServiceContentStrings(dynamicContent: {
       Twitter: dynamicContent['default_banner_twitter_title'],
       Viber: dynamicContent['default_banner_viber_title'],
       Whatsapp: dynamicContent['default_banner_whatsapp_title'],
+      Website: dynamicContent['default_banner_website_title'],
     },
     openingHoursStrings: {
       Monday: dynamicContent['default_monday_label'],

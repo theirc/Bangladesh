@@ -36,7 +36,7 @@ export default function LocaleSelectPage() {
   return (
     <LocaleSelectPageBase
       siteTitle={SITE_TITLE}
-      message={'বাংলাদেশে শরণার্থী এবং প্রয়োজনে মানুষের জন্য কার্যকরী তথ্য'}
+      message={'রোহিঙ্গা শরণার্থী এবং বাংলাদেশি কমিউনিটির জন্য তথ্য পরিষেবা।'}
       langs={langs}
       image={<Image src={logo} alt="icon" />}
     />

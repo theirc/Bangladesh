@@ -48,7 +48,7 @@ module.exports = withLess({
       modifyVars: {
         'primary-color': '#4DA09C ',
         'secondary-color': '#4DA09C',
-        'accent-color': '#F2AD3C',
+        'accent-color': '#344060',
         'info-color': '@accent-color',
         'alert-info-bg-color': '@accent-color',
         // Override Ant typography.

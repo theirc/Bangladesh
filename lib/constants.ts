@@ -27,6 +27,7 @@ export const CATEGORY_ICON_NAMES: { [key: string]: string } = {
   // '11443550596125': 'security',
   '10214152412957': 'people',
   '10214179472797': 'transfer_within_a_station',
+  '15216737773341': 'flood',
 };
 
 // A mapping from section ID to a Material icon for that section.

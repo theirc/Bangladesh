@@ -81,6 +81,7 @@ export default function SearchResultsPage({
       strings={strings}
       siteUrl={siteUrl}
       signpostVersion={publicRuntimeConfig?.version}
+      servicesFilter={[1]}
       cookieBanner={
         <CookieBanner
           strings={populateCookieBannerStrings(dynamicContent)}
